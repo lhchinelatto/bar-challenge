@@ -1,0 +1,30 @@
+# Update <REGISTRY> <NAMESPACE> values before use
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bar-challenge
+  labels:
+    app: bar-challenge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bar-challenge
+  template:
+    metadata:
+      labels:
+        app: bar-challenge
+    spec:
+      containers:
+        - name: bar-challenge
+          image: us.icr.io/bar-challenge/myapp:v1.0.1
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Always
+          env:
+            - name: CLOUDANT_URL
+              valueFrom:
+                secretKeyRef:
+                  name: cloudant
+                  key: url
+                  optional: true
