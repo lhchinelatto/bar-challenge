@@ -186,8 +186,11 @@ if (cloudant) {
   vendor = 'cloudant';
 }
 
+const routes = require('./routes/routes.js');
+
 //serve static file (index.html, images, css)
 app.use(express.static(__dirname + '/views'));
+app.use('/api', routes);
 
 
 
