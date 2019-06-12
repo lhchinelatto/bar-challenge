@@ -1,8 +1,8 @@
 {
-  "name": "get-started-node",
+  "name": "bar-challenge",
   "main": "server.js",
-  "description": "An introduction to developing Node.js apps on the IBM Cloud platform",
-  "version": "0.1.1",
+  "description": "",
+  "version": "0.0.1",
   "private": false,
   "engines": {
     "node": "12.3.1"
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/IBM-Cloud/get-started-node"
+    "url": "https://github.com/lhchinelatto/bar-challenge"
   },
   "dependencies": {
     "@cloudant/cloudant": "^3.0.2",
@@ -23,6 +23,6 @@
     "js-yaml": "^3.13.1",
     "mongodb": "^3.0.10"
   },
-  "author": "IBM Corp",
-  "license": "Apache-2.0"
+  "author": "",
+  "license": ""
 }
