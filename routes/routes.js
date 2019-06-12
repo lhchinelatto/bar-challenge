@@ -6,3 +6,4 @@ router.get("/listarJogos", controller.list_all_games);
 router.get("/encontrarJogo", controller.find_game);
 
 module.exports = router;
+
